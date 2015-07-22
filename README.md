@@ -58,8 +58,14 @@ angular.module('app', ['cerebral'])
       state.push('list', 'bar');
     };
 
-    // Create signals 
+    // Create signals
     cerebral.signal('addItemClicked', addItem);
 
   });
 ```
+
+## Try it out
+1. Clone repo
+2. `npm install`
+3. `npm start`
+4. Go to `localhost:8080`
