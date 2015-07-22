@@ -1,0 +1,26 @@
+{
+  "name": "cerebral-angular-immutable-store",
+  "main": "release/cerebral-angular-immutable-store.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/christianalfoni/cerebral-angular-immutable-store",
+  "authors": [
+    "christianalfoni <christianalfoni@gmail.com>"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3"
+  },
+  "description": "Cerebral package for angular and immutable store",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "cerebral",
+    "angular",
+    "state",
+    "controller"
+  ],
+  "license": "MIT"
+}
