@@ -1,6 +1,6 @@
 {
   "name": "cerebral-angular-immutable-store",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Cerebral package for angular and immutable store",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "angular": "^1.4.3"
   },
   "dependencies": {
-    "cerebral": "^0.11.0"
+    "cerebral": "^0.11.1"
   },
   "devDependencies": {
     "babel-core": "^5.8.3",
