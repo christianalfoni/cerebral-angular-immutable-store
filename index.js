@@ -86,6 +86,7 @@ var Factory = function (state, defaultArgs) {
 angular.module('cerebral', [])
   .provider('cerebral', function () {
 
+    var services = ['$http'];
     var state = {};
     var defaultArgs = {};
 
@@ -97,9 +98,14 @@ angular.module('cerebral', [])
       defaultArgs = args;
     };
 
-    this.$get = function () {
+    this.$get = services.concat([function () {
+      var args = arguments;
+      defaultArgs.services = services.reduce(function (services, service, index) {
+        services[service] = args[index];
+        return services;
+      }, {});
       return new Factory(state, defaultArgs);
-    };
+    }]);
   });
 
 module.exports = angular;

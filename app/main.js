@@ -1,35 +1,18 @@
+import './../node_modules/todomvc-common/base.css';
+import './../node_modules/todomvc-app-css/index.css';
+
 import angular from 'angular';
-import Controller from './../index.js';
+import './../index.js';
+import config from './config.js';
+import run from './run.js';
 
-angular.module('app', ['cerebral'])
-  .config(function (cerebralProvider) {
-    console.log(cerebralProvider);
-    cerebralProvider.setState({
-      list: ['foo']
-    });
-  })
-  .directive ('myComponent', function () {
-    return {
-      controllerAs: 'myComponent',
-      scope: {},
-      templateUrl: 'myComponent.html',
-      controller: function ($scope, cerebral) {
+import TodoMVC from './components/TodoMVC.js';
+import TodoList from './components/TodoList.js';
 
-        cerebral.injectState($scope, {
-          list: ['list']
-        });
+angular.module('todomvc', ['cerebral'])
+  .config(config)
 
-        $scope.addItem = function () {
-          cerebral.signals.addItemClicked();
-        };
-
-      }
-    };
-  })
-  .run(function (cerebral) {
-
-    cerebral.signal('addItemClicked', function AddItem (args, state) {
-      state.push('list', 'bar');
-    })
-
-  });
+  // Components
+  .directive('todoMvc', TodoMVC)
+  .directive('todoList', TodoList)
+  .run(run);
