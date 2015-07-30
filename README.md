@@ -17,8 +17,6 @@ The way you structure a Cerebral Angular app works quite differently. Instead of
 
 The examples below is just one way of organizing these signals and their actions. Feel free to explore your own ways of doing so.
 
-Please go to main repo [Cerebral](https://github.com/christianalfoni/cerebral) to read more about signals.
-
 ## Get started
 We are going to use a file structure where we use `main.js`, `run.js` and `config.js`
 
