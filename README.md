@@ -5,7 +5,7 @@ A cerebral package for angular and immutable-store
 You can download the Chrome Cerebral Debugger [here](https://chrome.google.com/webstore/detail/cerebral-debugger/ddefoknoniaeoikpgneklcbjlipfedbb?hl=no).
 
 ## More info on Cerebral and video introduction
-Cerebral main repo is located [here](https://github.com/christianalfoni/cerebral) and a video demonstration can be bound [here](https://www.youtube.com/watch?v=xCIv4-Q2dtA).
+Cerebral main repo is located [here](https://github.com/christianalfoni/cerebral) and a video demonstration can be found [here](https://www.youtube.com/watch?v=YVmgLReFjLw).
 
 ## Install
 `npm install cerebral-angular-immutable-store`
