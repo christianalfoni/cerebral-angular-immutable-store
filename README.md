@@ -51,7 +51,7 @@ export default function (cerebralProvider) {
 Read more about [immutable-store](https://github.com/christianalfoni/immutable-store#mapping-state) to understand how mapping of state works.
 
 ### Create signals and actions
-Actions is where it all happens. This is where you define mutations to your application state based on information sent from the VIEW layer. Actions are pure functions that can run synchronously and asynchronously. They are easily reused across signals and can easily be tested.
+Creating actions are generic. It works the same way across all packages. Please read about actions at the [Cerebral Repo - Actions](https://github.com/christianalfoni/cerebral#how-to-get-started). You can also watch [a video on creating actions](https://www.youtube.com/watch?v=ylJG4vUx_Tc) to get an overview of how it works.
 
 In larger application you should consider putting each action in its own file.
 
@@ -172,56 +172,6 @@ export default function () {
     }
   };
 };
-```
-
-### Mutations
-You can do any traditional mutation to the state, the signature is just a bit different. You call the kind of mutation first, then the path and then an optional value. The path can either be a string or an array for nested paths.
-```js
-const someAction = function someAction (args, state) {
-  state.set('isLoading', false);
-  state.unset('isLoading');
-  state.merge('user', {name: 'foo'});
-  state.push('list', 'foo');
-  state.unshift('list', 'bar');
-  state.pop('list');
-  state.shift('list');
-  state.concat('list', [1, 2, 3]);
-  state.splice('list', 1, 1, [1]);
-
-  state.push(['admin', 'users'], {foo: 'bar'});
-
-};
-```
-
-### Get state in actions
-```js
-const someAction = function someAction (args, state) {
-  const isLoading = state.get('isLoading');
-};
-```
-
-### Async actions
-```js
-const someAction = function someAction (args, state, promise) {
-  args.utils.ajax('/foo', function (err, result) {
-    if (err) {
-      promise.reject({error: err});
-    } else {
-      promise.resolve({result: result});
-    }
-  })
-};
-```
-You can optionally redirect resolved and rejected async actions to different actions by inserting an object as the last entry in the async array definition.
-```js
-controller.signal('formSubmitted',
-  setLoading,
-  [saveForm, {
-    resolve: [closeModal],
-    reject: [setFormError]
-  }],
-  unsetLoading
-);
 ```
 
 ### Recording
