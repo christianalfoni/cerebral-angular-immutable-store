@@ -5,7 +5,7 @@ A cerebral package for angular and immutable-store
 You can download the Chrome Cerebral Debugger [here](https://chrome.google.com/webstore/detail/cerebral-debugger/ddefoknoniaeoikpgneklcbjlipfedbb?hl=no).
 
 ## More info on Cerebral and video introduction
-Cerebral main repo is located [here](https://github.com/christianalfoni/cerebral) and a video demonstration can be bound [here](https://www.youtube.com/watch?v=xCIv4-Q2dtA).
+Cerebral main repo is located [here](https://github.com/christianalfoni/cerebral) and a video demonstration can be found [here](https://www.youtube.com/watch?v=YVmgLReFjLw).
 
 ## Install
 `npm install cerebral-angular-immutable-store`
@@ -16,8 +16,6 @@ or
 The way you structure a Cerebral Angular app works quite differently. Instead of creating services and controllers that handles your application state you use **signals**. Signals are a way to handle application flow that gives you a much better overview, a set structure and it can be debugged.
 
 The examples below is just one way of organizing these signals and their actions. Feel free to explore your own ways of doing so.
-
-Please go to main repo [Cerebral](https://github.com/christianalfoni/cerebral) to read more about signals.
 
 ## Get started
 We are going to use a file structure where we use `main.js`, `run.js` and `config.js`
