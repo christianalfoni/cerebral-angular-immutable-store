@@ -52,6 +52,7 @@ Read more about [immutable-store](https://github.com/christianalfoni/immutable-s
 Creating actions are generic. It works the same way across all packages. Please read about actions at the [Cerebral Repo - Actions](https://github.com/christianalfoni/cerebral#how-to-get-started). You can also watch [a video on creating actions](https://www.youtube.com/watch?v=ylJG4vUx_Tc) to get an overview of how it works.
 
 In larger application you should consider putting each action in its own file.
+
 *run.js*
 ```js
 import {
