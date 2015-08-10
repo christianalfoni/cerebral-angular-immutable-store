@@ -52,37 +52,6 @@ Read more about [immutable-store](https://github.com/christianalfoni/immutable-s
 Creating actions are generic. It works the same way across all packages. Please read about actions at the [Cerebral Repo - Actions](https://github.com/christianalfoni/cerebral#how-to-get-started). You can also watch [a video on creating actions](https://www.youtube.com/watch?v=ylJG4vUx_Tc) to get an overview of how it works.
 
 In larger application you should consider putting each action in its own file.
-
-*actions.js*
-```js
-export default {
-  // Define an action with a function. It receives two arguments when run
-  // synchronously
-  setLoading(args, state) {
-    state.set('isLoading', true);
-  },
-
-  // There are many types of mutations you can do, "set" is just one of them
-  unsetLoading(args, state) {
-    state.set('isLoading', false);
-  },
-
-  // When an action is run asynchronously it receives a third argument,
-  // a promise you can either resolve or reject. In addition to any default
-  // args you configure, you also have access to common Angular services, like
-  // $http
-  saveForm(args, state, promise) {
-    args.services.$http.post('/form', args.formData)
-      .success(function () {
-        promise.resolve();
-      })
-      .error(function () {
-        promise.reject();
-      });
-  };  
-};
-```
-
 *run.js*
 ```js
 import {
