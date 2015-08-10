@@ -49,7 +49,7 @@ export default function (cerebralProvider) {
 Read more about [immutable-store](https://github.com/christianalfoni/immutable-store#mapping-state) to understand how mapping of state works.
 
 ### Create signals and actions
-Creating actions are generic. It works the same way across all packages. Please read about actions at the [Cerebral Repo - Actions](https://github.com/christianalfoni/cerebral#how-to-get-started). You can also watch [a video on creating actions](https://www.youtube.com/watch?v=ylJG4vUx_Tc) to get an overview of how it works.
+Creating actions are generic. It works the same way across all packages. Please read about actions at the [Cerebral Repo - Actions](https://github.com/christianalfoni/cerebral#how-to-get-started). You can also watch [a video on signals](https://www.youtube.com/watch?v=zkeBjGdn7uM) to get an overview of how it works.
 
 In larger application you should consider putting each action in its own file.
 
