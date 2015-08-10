@@ -24,6 +24,9 @@ var Factory = function (state, defaultArgs) {
     onUpdate: function () {
       eventHub.emit('change', state);
     },
+    onRemember: function () {
+      eventHub.emit('remember', state);
+    },
     onGet: function (path) {
       return Value(path, state);
     },
@@ -75,6 +78,7 @@ var Factory = function (state, defaultArgs) {
     });
 
     eventHub.on('change', update);
+    eventHub.on('remember', update);
     update();
 
   };
